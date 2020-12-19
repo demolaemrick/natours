@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Emricky19/advanced-css-natour/issues"
   },
-  "homepage": "https://github.com/Emricky19/advanced-css-natour#readme"
+  "homepage": "https://github.com/Emricky19/advanced-css-natour#readme",
+  "devDependencies": {
+    "node-sass": "^5.0.0"
+  }
 }
