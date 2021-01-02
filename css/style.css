@@ -371,6 +371,10 @@ body {
   background-color: #f7f7f7;
   padding: 25rem 0 15rem 0; }
 
+.section-stories {
+  padding: 15rem 0;
+  background-color: #f7f7f7; }
+
 *,
 *::after,
 *::before {
