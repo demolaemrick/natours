@@ -16,7 +16,7 @@
       margin: -10rem 0;
 
       & > * {
-        transform: skewY(7deg);
+        transform: skewY(7deg); //to prevent all the direct child of the element from skewing too
       }
 }
 .section-tours{
