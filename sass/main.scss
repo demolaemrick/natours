@@ -18,10 +18,10 @@
 
 @import "layout/header";
 @import "layout/grid";
+@import "layout/footer";
 
 @import "pages/home";
 
- 
 *,
 *::after,
 *::before {
@@ -31,8 +31,7 @@
 }
 html {
   font-size: 62.5%;
-
 }
-body{
+body {
   box-sizing: border-box;
 }
