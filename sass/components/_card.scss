@@ -12,6 +12,7 @@
     height: 100%;
     width: 100%;
     transition: all 0.8s ease;
+    -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     border-radius: 3px;
     overflow: hidden; //this prevents the image to overlay the parent
@@ -171,7 +172,7 @@
     font-weight: 100;
   }
 
-  @include respond(tab-port) {
+  @media only screen and (max-width: 56.25em), only screen and(hover: none) {
     height: auto;
     border-radius: 3px;
     background-color: $color-white;
