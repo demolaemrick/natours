@@ -1,5 +1,5 @@
 .header {
-  height: 95vh;
+  height: 85vh;
   //   note! passing an HEX code into an rgba doesn't work in regular css it can only work in sass
   background-image: linear-gradient(
       to right bottom,
@@ -9,10 +9,15 @@
     url("../img/hero-small.jpg");
   background-size: cover;
   background-position: top;
-  -webkit-clip-path: polygon(0 0, 1000% 0, 100% 75vh, 0 100%);
-  clip-path: polygon(0 0, 1000% 0, 100% 75vh, 0 100%);
 
-  @media (min-resolution: 192dpi) and (min-width: 37.5em), (min-width: 125em) {
+  @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+    -webkit-clip-path: polygon(0 0, 1000% 0, 100% 75vh, 0 100%);
+    clip-path: polygon(0 0, 1000% 0, 100% 75vh, 0 100%);
+    height: 95vh;
+  }
+  @media (min-resolution: 192dpi) and (min-width: 37.5em),
+    // next line issefari only (min-device-pixel-ratio: 2) and (min-width: 37.5em),
+    (min-width: 125em) {
     background-image: linear-gradient(
         to right bottom,
         rgba($color-primary-light, 0.8),
@@ -27,8 +32,13 @@
   }
   &__logo-box {
     position: absolute;
-    top: 4rem;
-    left: 4rem;
+    top: 7rem;
+    left: 6rem;
+
+    @include respond(tab-port) {
+      top: 4.5rem;
+      right: 4.5rem;
+    }
   }
   &__logo {
     height: 3.5rem;
